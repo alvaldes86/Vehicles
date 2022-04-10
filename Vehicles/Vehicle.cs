@@ -41,7 +41,7 @@ namespace Vehicles
 
         
 
-        public string ToString()
+        public override string ToString()
         {
             string message = "";
 
