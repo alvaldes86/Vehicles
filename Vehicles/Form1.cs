@@ -16,5 +16,35 @@ namespace Vehicles
         {
             InitializeComponent();
         }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            Vehicle newVehicle = new Vehicle();
+            newVehicle.Wheels = int.Parse(txtWheels.Text);
+            newVehicle.Color = txtColor.Text;
+
+            lblMessageOutput.Text = newVehicle.ToString();
+
+            return;
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtWheels.Clear();
+            txtColor.Clear();
+            txtMake.Clear();
+            txtModel.Clear();
+
+            lblMessageOutput.ResetText();
+
+           //vehicles.Clear();
+
+            txtWheels.Focus();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

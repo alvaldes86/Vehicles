@@ -6,16 +6,11 @@ using System.Threading.Tasks;
 
 namespace Vehicles
 {
-    class Vehicle
+    public class Vehicle
     {
-        private int _wheels;
         private string _color;
 
-        public int Wheels
-        {
-            get { return _wheels; }
-            set { _wheels = value; }
-        }
+        public int Wheels { get; set; }
 
         public string Color
         {
@@ -43,7 +38,7 @@ namespace Vehicles
 
         public override string ToString()
         {
-            string message = "";
+            string message = "Wheels: " + Wheels.ToString() + " Color: " + Color;
 
             return message;
 
